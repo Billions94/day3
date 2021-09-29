@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import WarningSign from './components/WarningSign';
+// import MyBadge from './components/MyBadge';
+import BookList from './components/BookList';
+import MyNav from './components/MyNav';
+import MyFooter from './components/MyFooter';
+import Hello from './components/Hello';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MyNav />
+      <Hello />
+      <WarningSign text='This is a warning' color='danger' />
+      <BookList />
+      <MyFooter />
     </div>
   );
 }
