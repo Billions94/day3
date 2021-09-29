@@ -1,6 +1,5 @@
 import { Component } from 'react'
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
 import FormControl from 'react-bootstrap/FormControl'
 // Importing SingleBook and pass
 import SingleBook from './SingleBook';
@@ -31,8 +30,8 @@ class BookList extends Component {
     render() {
         return (
 
-            <Container >
-                <Row>
+            <Container className="mb-5 fluid">
+                <div className="mb-5">
 
                     <FormControl
                         className="input"
@@ -40,17 +39,18 @@ class BookList extends Component {
                         aria-label="Book Title"
                         value={this.state.title}
                         onChange={e => (this.setState({title: e.target.value}))}/>
-
+                </div>
+                <div className="d-flex">
                     {
                         this.filtreBooksList(this.state.title),
                         filteredBooks.map(book => (
-                            <div key={book.asin} className='d-flex'>
+                            <div key={book.asin} className=''>
                                 <SingleBook book={book} />                                
                             </div>                
                         ))
                     }
-
-                </Row>
+                </div>
+                
             </Container>
 
         )

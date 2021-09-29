@@ -18,7 +18,7 @@ class SingleBook extends Component {
 
     return (
              
-            <div className="d-flex mt-5 mb-5 ml-2">
+            <div className="mt-5 mb-5 ml-2">
                 <div>
                     <Card onClick={this.handleToggle} className={this.state.selected ? "selected" : null} key={this.props.book.asin}  style={{ width: '16rem' }}>
                         <Card.Img variant="top" src={this.props.book.img}  style={{ height: '20rem' }} />
