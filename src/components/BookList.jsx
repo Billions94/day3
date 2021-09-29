@@ -11,39 +11,39 @@ import Horror from '../data/horror.json'
 
 
 
-let filteredBooks = ['']
+// let queryBooks = ['']
 
 class BookList extends Component {
 
 
         state = {
-            title: ''
+            title: '',
+            queryBooks: Horror
         }
 
-            filtreBooksList = (query) => {
-                filteredBooks = Horror.filter((book) =>
-                book.title.toLowerCase().includes(query.toLowerCase())
+            filterBooks = (query) => {
+             let queryBooks = Horror.filter((book) =>
+                 book.title.toLowerCase().includes(query.toLowerCase())
             )
-
+            this.setState({ queryBooks });
             }
 
     render() {
         return (
 
             <Container className="mb-5 fluid">
-                <div className="mb-5">
+                <div className="d-flex justify-content-center mb-3">
 
                     <FormControl
                         className="input"
                         placeholder="Search your favorite horror book..."
-                        aria-label="Book Title"
                         value={this.state.title}
-                        onChange={e => (this.setState({title: e.target.value}))}/>
+                        onChange={(e) => {(this.setState({title: e.target.value,}));
+                        this.filterBooks(e.target.value)}}/>
                 </div>
                 <div className="d-flex">
                     {
-                        this.filtreBooksList(this.state.title),
-                        filteredBooks.map(book => (
+                        this.state.queryBooks.map(book => (
                             <div key={book.asin} className=''>
                                 <SingleBook book={book} />                                
                             </div>                

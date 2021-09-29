@@ -1,7 +1,7 @@
 import Alert from 'react-bootstrap/Alert'
 
 const WarningSign = (props) => (
-    <Alert  variant={props.color}>
+    <Alert className="bold" variant={props.color}>
     {props.text}
   </Alert>
 )

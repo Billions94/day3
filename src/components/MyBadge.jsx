@@ -2,7 +2,7 @@ import Badge from 'react-bootstrap/Badge'
 
 const MyBadge = (props) => (
     
-    <Badge variant={props.color}>{props.text}</Badge>
+    <Badge className={props.className} variant={props.color}>{props.text}</Badge>
     
 )
 

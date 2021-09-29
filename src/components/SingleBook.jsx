@@ -18,9 +18,9 @@ class SingleBook extends Component {
 
     return (
              
-            <div className="mt-5 mb-5 ml-2">
+            <div className="mt-4 mb-5 ml-2">
                 <div>
-                    <Card onClick={this.handleToggle} className={this.state.selected ? "selected" : null} key={this.props.book.asin}  style={{ width: '16rem' }}>
+                    <Card onClick={this.handleToggle} className={this.state.selected ? "cardborder" : "selected"} key={this.props.book.asin}  style={{ width: '16rem' }}>
                         <Card.Img variant="top" src={this.props.book.img}  style={{ height: '20rem' }} />
                         <Card.Body>
                             <Card.Title className="clamp">{this.props.book.title}</Card.Title>
@@ -29,7 +29,7 @@ class SingleBook extends Component {
                             </h5>                               
                             <div className="d-flex justify-content-between">
                                 <Button variant="warning">Buy</Button>                                
-                                <MyBadge text={'€' + this.props.book.price} color='warning' />
+                                <MyBadge className="badge" text={'€' + this.props.book.price} color='warning' />
                             </div>
                         </Card.Body>
                     </Card>
