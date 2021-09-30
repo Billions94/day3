@@ -1,6 +1,5 @@
 import Card from 'react-bootstrap/Card'
 import { Component } from 'react'
-import MyBadge from './MyBadge'
 import Button from 'react-bootstrap/Button'
 
 
@@ -19,7 +18,6 @@ class SingleBook extends Component {
     return (
              
       <div className="mt-4 mb-5 ml-2">
-              <MyBadge className="badge" text="New!" color='info' />
                 <div>
                     <Card onClick={this.handleToggle} className={this.state.selected ? "cardborder" : "selected"} key={this.props.book.asin}  style={{ width: '16rem' }}>
                         <Card.Img variant="top" src={this.props.book.img}  style={{ height: '20rem' }} />
@@ -38,10 +36,9 @@ class SingleBook extends Component {
             </div>
             
 
-    )
+          )
 
-  }
-
+         }
 }
 
 

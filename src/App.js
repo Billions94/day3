@@ -5,6 +5,8 @@ import BookList from './components/BookList';
 import MyNav from './components/MyNav';
 import MyFooter from './components/MyFooter';
 import Hello from './components/Hello';
+import SingleBook from './components/SingleBook';
+import Horror from './data/horror.json'
 
 
 
@@ -15,6 +17,7 @@ function App() {
       <MyNav />
       <Hello />
       <WarningSign text='Bruh 💀☠️'/>
+      <SingleBook book={Horror[0]}/>
       <BookList />
       <MyFooter />
     </div>
