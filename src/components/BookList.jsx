@@ -9,10 +9,6 @@ import Horror from '../data/horror.json'
 
 
 
-
-
-// let queryBooks = ['']
-
 class BookList extends Component {
 
 
